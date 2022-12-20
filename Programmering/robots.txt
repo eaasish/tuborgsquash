@@ -1,0 +1,4 @@
+user-agent: *
+Disallow: /
+
+Sitemap: https://tuborgsquash.eaasimone.dk/sitemap.xml

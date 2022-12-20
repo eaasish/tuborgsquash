@@ -1,0 +1,587 @@
+/* Styling af hele siden */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* 
+Kilde til hjælp af design i CSS
+
+CSS Crash Course In 30 Minutes (2019). 
+Available at: https://www.youtube.com/watch?v=Tfjd5yzCaxk (Accessed: 18 December 2022).
+*/
+
+/* Styling af mobil container*/
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #fee7d6;
+    color: black;
+}
+
+/* Styling af nav*/
+
+header {
+    background-color: #fee7d6;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #ff750a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.nav-branding img {
+    width: 110px;
+    margin-top: 5px;
+    margin-left: -35px;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: #de6000;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ff750a;
+}
+
+.box {
+    display: flex;
+    width: 80%;
+    margin-left: 12%;
+    margin-top: 10%;
+}
+
+/* Styling af overskrift samt indledning */
+
+h1 {
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    color: #d75d00;
+    font-size: 7vw;
+    margin-top: -21%;
+    margin-left: 18%;
+}
+
+.indledning p {
+    margin-top: 20%;
+    color: #d75d00;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+/* Styling af billeder med de to smagsvarianter */
+
+.original {
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 12%;
+    height: 50vw;
+
+}
+
+.light {
+    width: 80%;
+    margin-right: 20%;
+    margin-top: 12%;
+    height: 50vw;
+}
+
+.box-1 {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.com-light {
+    display: none;
+}
+
+.squash-original h2 {
+    font-family: 'Satisfy', cursive;
+    color: #d75d00;
+    font-size: 6vw;
+    margin-top: -22%;
+    margin-left: 15%;
+}
+
+.squash-light h2 {
+    font-family: 'Satisfy', cursive;
+    color: #d75d00;
+    font-size: 6vw;
+    margin-top: -22%;
+    margin-left: 15%;
+}
+
+span {
+    font-size: 5vw;
+}
+
+/* Styling af citat */
+
+.citat h3 {
+    color: #ff750a;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* Styling af Infographic */
+
+.img-1 {
+    width: 100%;
+}
+
+/* Styling af tekst */
+
+.indhold {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.indhold h3,p{
+    text-align: center;
+    font-size: 5vw;
+    color: #ff750a;
+    width: 80%;
+    margin-left: 10%;
+    
+}
+
+/* Styling af footer */
+
+.footer-img {
+    display: block;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.com-footer-img {
+    display: none;
+}
+
+.info { 
+    margin-top: -145%;
+    margin-left: 10%;
+}
+
+
+h4 {
+    color: #fff;
+    padding-top: 2vw;
+    font-size: 5vw;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+h3 {
+    color: #fff;
+    text-decoration: none;
+    padding-top: 2vw;
+    font-size: 4vw;
+  } 
+
+
+.socials a{
+    display: inline-block;
+    font-size: 8vw;
+    height: 12vw;
+    width: 12vw;
+    background: #ffffff21;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 12vw;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .socials a:hover{
+    color: #fff;
+    background-color:#ff7700;
+  
+  }
+
+  /* breakpoint for burgermenu */
+
+  /* 
+    Kilde benyttet til responsive webdesign
+    
+    Chris, K. (2021) Responsive Web Design – Modern Website Code for Beginners, freeCodeCamp.org. 
+    Available at: https://www.freecodecamp.org/news/responsive-web- design-modern-website-code-for-beginners (Accessed: 31 October 2022).
+*/
+
+@media screen and (max-width:768px) {
+    
+    .hamburger {
+        display: block;
+
+    }
+
+    .haburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .haburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .haburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fce7d4;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+}
+
+/* første breakpoint 
+
+Build a Responsive Mobile First Website (2018). 
+Available at: https://www.youtube.com/watch?v=XsEnj-1hG2o (Accessed: 31 October 2022).
+
+*/
+
+@media screen and (min-width: 480px) {
+
+    .mobile-container {
+        max-width: 768px;
+        margin: auto;
+    }
+
+    .nav-branding img {
+        width: 120px;
+        margin-top: 5px;
+        margin-left: -35px;
+    }
+    
+    .indhold h3,p {
+        font-size: 4vw;
+        
+    }
+
+    h4 {
+        font-size: 4vw;
+      }
+    
+    h3 {
+        font-size: 3vw;
+      } 
+   
+      .citat h3 {
+        width: 80%;
+        font-size: 4.5vw;
+        margin-left: 10%;
+    }
+
+  }
+
+
+  /* andet breakpoint */
+
+  @media screen and (min-width: 768px) {
+
+    .mobile-container {
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    .nav-item a {
+        font-size: 20px;
+
+    }
+
+    .nav-branding img {
+        width: 130px;
+    }
+
+    .box {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    h1 {
+        font-size: 5vw;
+        margin-top: -14%;
+        margin-left: 24%;
+    }
+
+    .indledning p {
+        font-size: 2.5vw;
+        margin-top: 15%;
+    }
+
+    .box-1 {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .squash-original h2 {
+        font-size: 4vw;
+        margin-top: -17%;
+        margin-left: 25%;
+    }
+    
+    .squash-light h2 {
+        font-size: 4vw;
+        margin-top: -17%;
+        margin-left: 25%;
+    }
+
+    span {
+        font-size: 4vw;
+    }
+
+    .original {
+        width: 70%;
+        margin-left: 30%;
+        margin-top: 12%;
+        height: 45vw;
+    
+    }
+    
+    .light {
+        width: 70%;
+        margin-right: 30%;
+        margin-top: 12%;
+        height: 45vw;
+    }
+
+    .indhold h3,p {
+        font-size: 3vw;
+        
+    }
+
+    
+    .info {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        padding-top: 85%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0;
+        margin-right: 0;
+    
+    }
+
+    .citat h3 {
+        font-size: 5vw;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .footer-img {
+        display: none;
+    }
+
+    .com-footer-img {
+        display: block;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    h3 {
+        font-size: 2vw;
+        padding: 2%;
+
+    }
+
+    h4 {
+        font-size: 3vw;
+        padding: 2%;
+
+    }
+
+    .socials a {
+    font-size: 3vw;
+    height: 7vw;
+    width: 7vw;
+    line-height: 7vw;
+    }
+
+    .info {
+        margin-top: -125%;
+    }
+
+
+    }
+
+     /* tredje breakpoint */
+
+    @media screen and (min-width: 1024px) {
+
+        .mobile-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .nav-item a {
+            font-size: 22px;
+        }
+
+        .nav-branding img {
+            width: 140px;
+
+        }
+
+        h1 {
+            font-size: 4.5vw;
+        }
+
+        .com-light {
+            display: grid;
+        }
+
+        .mobile-light {
+            display: none;
+        }
+
+        .squash-original {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .squash-light {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .original {
+            width: 100%;
+            margin-left: 0%;
+            height: 35vw;
+        }
+
+        .light {
+            width: 100%;
+            margin-left: 0%;
+            height: 35vw;
+        }
+
+        .box-1 {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 30%;
+            
+        }
+
+        .squash-original h2 {
+            font-size: 4vw;
+            margin-top: -28%;
+            margin-left: 6%;
+        }
+        
+        .squash-light h2 {
+            font-size: 4vw;
+            margin-top: -41%;
+            margin-left: 10%;
+        }
+
+        span {
+            font-size: 3vw;
+        }
+
+        .citat h3 {
+            width: 70%;
+            margin-left: 15%;
+            font-size: 4vw;
+        }
+
+        .indhold h3,p {
+            font-size: 3vw;
+            
+        }
+
+       
+
+        }
+
+
+    /* fjerde breakpoint */
+
+    @media screen and (min-width: 1200px) {
+
+    .mobile-container {
+        max-width: none;
+        margin: auto;
+    }
+
+    .nav-branding img {
+        width: 150px;
+        
+    }
+
+    .nav-item a {
+        font-size: 22px;
+    }
+    
+    .indhold h3,p {
+        width: 70%;
+        margin-left: 15%;
+        font-size: 3vw;
+        
+    }
+
+   
+
+  }

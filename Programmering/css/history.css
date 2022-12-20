@@ -1,0 +1,457 @@
+/* Styling af hele siden */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* 
+Kilde til hjælp af design i CSS
+
+CSS Crash Course In 30 Minutes (2019). 
+Available at: https://www.youtube.com/watch?v=Tfjd5yzCaxk (Accessed: 18 December 2022).
+*/
+
+/* Styling af mobil container*/
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #fee7d6;
+    color: black;
+}
+
+/* Styling af nav*/
+
+header {
+    background-color: #fee7d6;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #ff750a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.nav-branding img {
+    width: 110px;
+    margin-top: 5px;
+    margin-left: -35px;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: #de6000;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ff750a;
+}
+
+/* Styling af billeder */
+
+.firkanter {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.oranges {
+    width: 70%;
+    margin-top: -41%;
+    margin-left: 20%;
+}
+
+/* Styling af overskrift samt tekst */
+
+.box {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+h1 {
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    color: #d75d00;
+    font-size: 7vw;
+    margin-top: -21%;
+    margin-left: 4%;
+}
+
+h2 {
+    color: #d75d00;
+    font-size: 5vw;
+
+}
+
+.history {
+    width: 90%;
+    color: #d75d00;
+    font-size: 4vw;
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+.indhold {
+    width: 90%;
+    color: #d75d00;
+    font-size: 4vw;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+/* Styling af billede med logo */
+
+.squash-cirkel {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+/* Styling af footer */
+
+.footer-img {
+    display: block;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.com-footer-img {
+    display: none;
+}
+
+.info { 
+    margin-top: -145%;
+    margin-left: 10%;
+}
+
+
+h4 {
+    color: #fff;
+    padding-top: 2vw;
+    font-size: 5vw;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+h3 {
+    color: #fff;
+    padding-top: 2vw;
+    font-size: 4vw;
+  } 
+
+
+.socials a{
+    display: inline-block;
+    font-size: 8vw;
+    height: 12vw;
+    width: 12vw;
+    background: #ffffff21;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 12vw;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .socials a:hover{
+    color: #fff;
+    background-color:#ff7700;
+  
+  }
+
+  /* breakpoint for burgermenu */
+
+  /* 
+    Kilde benyttet til responsive webdesign
+    
+    Chris, K. (2021) Responsive Web Design – Modern Website Code for Beginners, freeCodeCamp.org. 
+    Available at: https://www.freecodecamp.org/news/responsive-web- design-modern-website-code-for-beginners (Accessed: 31 October 2022).
+*/
+
+@media screen and (max-width:768px) {
+    
+    .hamburger {
+        display: block;
+
+    }
+
+    .haburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .haburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .haburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fce7d4;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+}
+
+/* første breakpoint */
+
+@media screen and (min-width: 480px) {
+
+    .mobile-container {
+        max-width: 768px;
+        margin: auto;
+    }
+
+    .nav-branding img {
+        width: 120px;
+        margin-top: 5px;
+        margin-left: -35px;
+    }
+    
+
+    article {
+        font-size: 3vw;
+
+    }
+
+    h4 {
+        font-size: 4vw;
+      }
+    
+    h3 {
+        font-size: 3vw;
+      } 
+   
+
+  }
+
+   /* andet breakpoint */
+
+  @media screen and (min-width: 768px) {
+
+    .mobile-container {
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    .nav-item a {
+        font-size: 20px;
+
+    }
+
+    .firkanter {
+        margin-top: 5%;
+    }
+
+    .nav-branding img {
+        width: 130px;
+    }
+
+    .history {
+        margin-top: 10%;
+        font-size: 2.5vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+        margin-top: -15%;
+        margin-left: 15%;
+    }
+
+    h2 {
+        color: #d75d00;
+        font-size: 3vw;
+    
+    }
+    .box {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .indhold {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 5%;
+        font-size: 2.5vw;
+    }
+
+    .squash-cirkel {
+        width: 90%;
+        margin: 0;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    
+    .footer-img {
+        display: none;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        padding-top: 85%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 0;
+        margin-right: 0;
+    
+    }
+
+    .com-footer-img {
+        display: block;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    h3 {
+        font-size: 2vw;
+        padding: 2%;
+
+    }
+
+    h4 {
+        font-size: 3vw;
+        padding: 2%;
+
+    }
+
+    .socials a {
+    font-size: 3vw;
+    height: 7vw;
+    width: 7vw;
+    line-height: 7vw;
+    }
+
+    .info {
+        margin-top: -125%;
+    }
+
+
+    }
+
+
+    /* tredje breakpoint */
+
+    @media screen and (min-width: 1024px) {
+
+        .mobile-container {
+            max-width: 1200px;
+            margin: auto;
+        
+        }
+
+        .nav-item a {
+            font-size: 22px;
+        }
+
+        .nav-branding img {
+            width: 140px;
+
+        }
+
+        .firkanter {
+            margin-top: 5%;
+        }
+
+        .oranges {
+            width: 70%;
+            margin-left: 20%;
+        }
+
+        .box {
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 5%;
+        }
+
+        h1 {
+            font-size: 4.5vw;
+            margin-top: -13%;
+        }
+
+        .squash-cirkel {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+       
+
+        }
+
+        /* fjerde breakpoint */
+
+  @media screen and (min-width: 1200px) {
+
+    .mobile-container {
+        max-width: none;
+        margin: auto;
+    }
+
+    .nav-branding img {
+        width: 150px;
+        
+    }
+
+    .nav-item a {
+        font-size: 22px;
+    }
+
+
+   
+
+  }
